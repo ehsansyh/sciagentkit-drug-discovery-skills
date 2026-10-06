@@ -1,0 +1,17 @@
+{
+  "name": "sciagentkit",
+  "owner": {
+    "name": "Ehsan Sayyah",
+    "url": "https://sciagentkit.com"
+  },
+  "description": "SciAgentKit: deterministic drug-discovery skills and MCP tools for AI agents. No invented numbers.",
+  "plugins": [
+    {
+      "name": "sciagentkit",
+      "source": "./plugins/claude-code-sciagentkit",
+      "description": "10 drug-discovery skills plus the SciAgentKit MCP server: molecule and ADME/tox analysis, generated-molecule audits, target/PDB selection, ligand and receptor preparation, pocket definition. Docking, MD and reports need SciAgentKit Enterprise.",
+      "version": "1.1.0",
+      "license": "Apache-2.0"
+    }
+  ]
+}

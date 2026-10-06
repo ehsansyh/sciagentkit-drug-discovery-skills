@@ -1,0 +1,16 @@
+services:
+  sciagentkit:
+    build: .
+    image: sciagentkit:latest
+    volumes:
+      - ./runs:/app/runs
+      - ./examples:/app/examples:ro
+    command: ["sciagent", "demo", "--out", "runs/docker_demo"]
+
+  sciagentkit-mcp:
+    build: .
+    image: sciagentkit:latest
+    volumes:
+      - ./runs:/app/runs
+      - ./examples:/app/examples:ro
+    command: ["python", "-m", "sciagentkit.servers.rdkit_server"]

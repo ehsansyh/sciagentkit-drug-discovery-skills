@@ -1,0 +1,80 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sciagentkit"
+dynamic = ["version"]
+description = "MCP-native scientific skills for reproducible computational biology and drug-discovery agents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [
+  { name = "Ehsan Sayyah" }
+]
+keywords = [
+  "mcp", "agents", "drug-discovery", "rdkit", "computational-biology",
+  "cheminformatics", "scientific-ai", "reproducibility", "openclaw"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "pandas>=2.0.0",
+  "numpy>=1.23.0",
+  "matplotlib>=3.7.0",
+  "typer>=0.12.0",
+  "rich>=13.0.0",
+  "pydantic>=2.0.0",
+  "scikit-learn>=1.3.0",
+  "rdkit>=2023.9.1",
+  "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+protein = ["biopython>=1.83"]
+docking = ["meeko>=0.5.0"]
+md = ["openmm>=8.1.0", "mdanalysis>=2.7.0", "prolif>=2.0.0"]
+reports = ["python-docx>=1.1.0", "reportlab>=4.0.0"]
+mcp = ["mcp>=1.0.0"]
+agent = ["openai-agents>=0.0.15"]
+forcefields = ["openff-toolkit>=0.16.0"]
+docs = ["mkdocs>=1.6.0", "mkdocs-material>=9.5.0"]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0", "mypy>=1.10.0", "build>=1.2.0"]
+
+[project.urls]
+Homepage = "https://sciagentkit.com"
+Documentation = "https://github.com/ehsansyh/sciagentkit-drug-discovery-skills/tree/main/docs"
+Issues = "https://github.com/ehsansyh/sciagentkit-drug-discovery-skills/issues"
+Source = "https://github.com/ehsansyh/sciagentkit-drug-discovery-skills"
+
+[project.scripts]
+sciagent = "sciagentkit.cli:main"
+
+[tool.hatch.version]
+path = "src/sciagentkit/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sciagentkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

@@ -1,0 +1,1 @@
+"""Core deterministic scientific utilities."""

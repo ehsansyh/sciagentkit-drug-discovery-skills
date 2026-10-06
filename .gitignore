@@ -1,0 +1,35 @@
+# ---- Secrets & runtime state — NEVER commit ----
+.env
+.env.*
+web/backend/.keys/
+**/vendor_key.json
+*.key
+web/backend/portal.db
+web/backend/outbox/
+
+# ---- build artifacts (never commit; the enterprise build bakes keys) ----
+dist/
+build/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg
+.venv/
+venv/
+
+# ---- Workflow outputs ----
+runs/
+
+# ---- Local Claude Code settings (machine-specific) ----
+.claude/settings.local.json
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

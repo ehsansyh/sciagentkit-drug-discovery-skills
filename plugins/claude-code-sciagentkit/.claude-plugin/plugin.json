@@ -1,0 +1,13 @@
+{
+  "name": "sciagentkit",
+  "version": "1.1.0",
+  "description": "Deterministic drug-discovery skills and MCP tools for Claude Code: RDKit-computed descriptors, ADME/tox, scaffold and novelty audits, target/PDB selection, ligand and receptor preparation, pocket definition, with reproducibility manifests.",
+  "author": {
+    "name": "Ehsan Sayyah",
+    "url": "https://sciagentkit.com"
+  },
+  "homepage": "https://sciagentkit.com",
+  "repository": "https://github.com/ehsansyh/sciagentkit-drug-discovery-skills",
+  "license": "Apache-2.0",
+  "keywords": ["drug-discovery", "cheminformatics", "rdkit", "mcp", "computational-biology", "reproducibility"]
+}

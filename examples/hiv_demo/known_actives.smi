@@ -1,0 +1,6 @@
+CC(=O)Oc1ccccc1C(=O)O aspirin_duplicate_for_demo
+CC(C)CC(N)C(=O)O leucine_duplicate_for_demo
+CC(C)(C)OC(=O)N1CCC(CC1)N boc_piperidine_duplicate_for_demo
+CC(C)Cc1ccc(cc1)[C@@H](C)C(=O)O ibuprofen
+COc1ccc2[nH]cc(CCN)c2c1 serotonin_like
+CC(C)(C)NCC(O)c1ccc(O)c(O)c1 beta_agonist_like

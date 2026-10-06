@@ -1,0 +1,5 @@
+[mcp_servers.sciagentkit]
+command = "python"
+args = ["scripts/start_mcp.py"]
+cwd = "."
+env = { PYTHONUNBUFFERED = "1" }

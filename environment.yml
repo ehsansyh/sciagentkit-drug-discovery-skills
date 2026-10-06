@@ -1,0 +1,28 @@
+name: sciagentkit
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - rdkit
+  - pandas
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - requests
+  - typer
+  - rich
+  - pydantic
+  - pytest
+  - biopython
+  - openbabel
+  - autodock-vina
+  - fpocket
+  - openmm
+  - mdanalysis
+  - openmmforcefields
+  - openff-toolkit
+  - prolif
+  - pdbfixer
+  - pip:
+      - -e .[mcp,protein,docking,md,reports,dev]
